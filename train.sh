@@ -1,0 +1,15 @@
+python train.py \
+    --model "uer/chinese_roberta_L-2_H-128" \
+    --train_path "data/comment_classify/train.txt" \
+    --dev_path "data/comment_classify/dev.txt" \
+    --save_dir "checkpoints/comment_classify" \
+    --img_log_dir "logs/comment_classify" \
+    --img_log_name "BERT" \
+    --num_labels 8 \
+    --batch_size 8 \
+    --max_seq_len 96 \
+    --valid_steps 50 \
+    --logging_steps 10 \
+    --num_train_epochs 5 \
+    --device "auto" \
+    --cpu_threads 2
